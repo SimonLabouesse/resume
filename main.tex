@@ -1,0 +1,113 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+\usepackage{bibunits}
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\name{Simon}{Labouesse}
+\title{Resume}                               % optional, remove / comment the line if not wanted
+\address{89 grand rue Marcillat en Combraille}{03420}{FRANCE}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\phone[mobile]{+33 6 38 48 88 64}                    % optional, remove / comment the line if not wanted
+%\phone[fixed]{+2~(345)~678~901}                    % optional, remove / comment the line if not wanted
+%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+\email{simon.labouesse@gmail.com}                               % optional, remove / comment the line if not wanted
+\homepage{https://sites.google.com/view/simonLabouesse}     % optional, remove / comment the line if not wanted
+\extrainfo{Birth date : August, 22nd 1990\, Nationality : French}                 % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+\quote{PhD student in optics, photonics and image processing. Currently working on super-resolution for optical imager.}                                 
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+\vspace{.2cm}
+\section{Education}
+\cventry{Marseille, France}{Ph.D. in optics, photonics and image processing}{Fresnel Institut}{2014--2017}{}{Theoretical study of active optical imager with unknown illuminations, creation of algorithms dedicated to fluorescence microscopy under speckle illumination. Supervisor : Anne Sentenac (Director of Research CNRS), Marc Allain (Assistant professor) }  % arguments 3 to 6 can be left empty
+\cventry{Nantes, France}{M. Sc. in Automatic, Signal and Image}{\'Ecole Centrale de Nantes}{2010--2014}{}{Master Degree (Automatic, Signal and Image) and engineer Degree of \'Ecole Centrale de Nantes}
+
+\vspace{.2cm}
+\section{Internship}
+\cventry{Jena, Germany}{Master thesis on Structured Illumination Microscopy (SIM)}{IPHT}{6 months, 2014}{}{Improvement of SIM reconstruction speed (Matlab and Julia) and comparison of different illumination patterns for SIM. Supervisor : Rainer Heintzmann (Professor)}
+\cventry{Puy-en-Velay, France}{Surface mesh from noisy data}{ISIT}{4 months, 2013}{}{Development of a surface mesh algorithm from noisy point cloud (c++). Supervisor : Antoine Vacavant (Assistant professor)} 
+\cventry{Vélizy-Paris, France}{HEVC video encoder and 4K video format demonstration}{ATEME}{10 months, 2012--2013}{}{Creation of an HEVC video encoder (c++) and of a demonstrator for 4K satellite transmission and 4K TV display. Supervisor : Jérôme Vieron (Director research and innovation ATEME)}  
+
+\vspace{.2cm}
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+\vspace{.2cm}
+\section{Talks}
+\cventry{San Fransisco, USA}{OSA International conference}{Mathematics In Imaging}{2017}{}{}
+\cventry{Heidelberg, Germany}{OSA International conference}{Mathematics In Imaging}{2016}{}{}
+\cventry{ESPCI, Paris, France}{Days of unconventional optical imaging}{JIONC}{2016}{}{}
+\cventry{ESPCI,Paris, France}{Days of unconventional optical imaging}{JIONC}{2015}{}{}
+\cventry{ENS, Lyon, France}{Symposium dedicated to signal processing}{GRETSI}{2015}{}{}
+
+\vspace{.2cm}
+\section{Posters}
+\cventry{Bordeaux, France}{International Conference, Focus On Microscopy}{FOM}{2017}{}{}
+\cventry{Phoenix, USA}{IEEE International Conference on Image Processing}{ICIP}{2016}{}{}
+\cventry{Paris, France}{Physical Interfaces, Digital and Theoretical}{Inphyniti}{2016}{}{}
+\cventry{Marseille, France}{Biologists, Chimists and Physicist}{BCP}{2015}{}{}
+
+\vspace{.2cm}
+\section{Teaching}
+\cventry{164h}{bachelor's Degree}{C programming language}{2014--2017}{}{}
+\cventry{30h}{master's Degree}{Acquisition, signal and image processing}{2016--2017}{}{}
+
+\vspace{.2cm}
+\section{Research area: signal processing for microscopy}
+\begin{itemize}
+\item{Fluorescence microscopy}{}
+\item{Super-resolution}{}
+\item{Linear algebra}{}
+\item{Convex optimization}{}
+\item{Inverse problems}{}
+\end{itemize}
+
+
+%\nocite{*}
+%\bibliographystyle{plain}
+%\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+
+
+\end{document}
+
+
+%% end of file `template.tex'.
